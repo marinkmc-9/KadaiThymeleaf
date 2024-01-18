@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
     <head>
@@ -10,7 +9,7 @@
         <h1>Thymeleaf課題</h1>
             <h2>入力画面</h2>
             <p>値を入力してください。</p>
-            <p th:if="${previous} neq null" th:text="'前回入力された値は「' + ${previous} + '」でした。'"></p> <!-- neqはnotequalの意味-->
+            <p th:if="${previous} neq null" th:text="#{content.message4} + ${previous}+ #{content.message5}"></p> <!-- neqはnotequalの意味-->
             <form method="post" action="/output"> <!-- 「送信」ボタンをクリックすると、入力フォームの値をPOSTメソッドでoutputに送信する-->
                 <input type="text" name="val">
                 <button type="submit">送信</button>
