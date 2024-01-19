@@ -3,12 +3,12 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>KadaiThymeleaf</title>
+        <title th:text="#{content.message1}"></title>   <!--KadaiThymeleaf-->
     </head>
     <body>
-        <h1>Thymeleaf課題</h1>
-            <h2>出力画面</h2>
-            <p th:text="#{content.message1} + ${val} + #{content.message2}" </p>
-            <p><a th:href="@{/input(previous=${val})}" th:text="#{content.message3}"></a></p><!-- valの値を上書きする-->
+        <h1 th:text="#{content.message2}"></h1>         <!--Thymeleaf課題-->
+            <h2 th:text="#{content.message4}"></h2>     <!--出力画面-->
+            <p th:text="#{content.message7} + ${val} + #{content.message8}" ></p>               <!--入力された値は「」です-->
+            <p><a th:href="@{/input(previous=${val})}" th:text="#{content.message11}"></a></p>  <!-- 入力画面へ戻る-->
     </body>
 </html>

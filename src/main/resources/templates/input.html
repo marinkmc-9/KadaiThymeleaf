@@ -3,16 +3,16 @@
 
     <head>
         <meta charset="utf-8">
-        <title>KadaiThymeleaf</title>
+        <title th:text="#{content.message1}"></title>   <!--KadaiThymeleaf-->
     </head>
     <body>
-        <h1>Thymeleaf課題</h1>
-            <h2>入力画面</h2>
-            <p>値を入力してください。</p>
-            <p th:if="${previous} neq null" th:text="#{content.message4} + ${previous}+ #{content.message5}"></p> <!-- neqはnotequalの意味-->
-            <form method="post" action="/output"> <!-- 「送信」ボタンをクリックすると、入力フォームの値をPOSTメソッドでoutputに送信する-->
+        <h1 th:text="#{content.message2}"></h1>         <!--Thymeleaf課題-->
+            <h2 th:text="#{content.message3}"></h2>     <!--入力画面-->
+            <p th:text="#{content.message5}"></p>       <!--値を入力してください。-->
+            <p th:if="${previous} neq null" th:text="#{content.message9} + ${previous}+ #{content.message10}"></p>  <!-- 前回入力された値は「」でした。-->
+            <form method="post" action="/output"> <!-- outputに送信する-->
                 <input type="text" name="val">
-                <button type="submit">送信</button>
+                <button type="submit" th:text="#{content.message6}">  </button>     <!--送信-->
             </form>
     </body>
 </html>
